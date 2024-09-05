@@ -13,6 +13,15 @@
       password: TestPassword
     state: present
 
+- name: "TOKEN: Set up user 2"
+  netbox.netbox.netbox_user:
+    netbox_url: http://localhost:32768
+    netbox_token: "0123456789abcdef0123456789abcdef01234567"
+    data:
+      username: TestUser2
+      password: TestPassword
+    state: present
+
 - name: "TOKEN 1: Necessary info creation"
   netbox.netbox.netbox_token:
     netbox_url: http://localhost:32768
